@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
-var lowerArray =  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!#$%&'()*+,-./:;<=>?@[]^_`{|}~\\\""
+var lowerArray =  "abcdefghijklmnopqrstuvwxyz"
 var upperArray = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 var numArray = "1234567890"
 var symArray = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~\\\""
@@ -25,39 +25,46 @@ function writePassword() {
           resultPassword = resultPassword +  lowerArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (upper && !num && !symbol) {
+        var conArray = lowerArray.concat(upperArray);
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (!upper && num && !symbol) {
+        var conArray = lowerArray.concat(numArray);
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (!upper && !num && symbol) {
+        var conArray = lowerArray.concat(symArray);
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (upper && num && !symbol) {
+        var conArray = lowerArray.concat(upperArray, numArray);
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (!upper && num && symbol) {
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var conArray = lowerArray.concat(numArray, symArray);
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (upper && !num && symbol) {
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var conArray = lowerArray.concat(upperArray, symArray);
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }else if (upper && num && symbol) {
         for(var i = 0; i<parseInt(lengthPass); i++){
-          var randomNum = Math.floor(Math.random() * lowerArray.length);
-          resultPassword = resultPassword +  lowerArray[randomNum];}
+          var conArray = lowerArray.concat(upperArray, numArray,symArray);
+          var randomNum = Math.floor(Math.random() * conArray.length);
+          resultPassword = resultPassword +  conArray[randomNum];}
           passwordText.value = resultPassword;
       }
       
