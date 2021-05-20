@@ -3,7 +3,9 @@
  ### Resourses:
  1. Website URL: https://ernestar.github.io/password_generator_assignment-3/
  2. Website screenshots:
- 
+ ![](resources/Screenshot%202021-05-19%20212828.png)
+ ![](resources/Screenshot%202021-05-19%20212911.png)
+ ![](resources/Screenshot%202021-05-19%20213028.png)
 ### Webpage and functionality description
  1. The web page generates 8 to 128 character password for the user 
  2. User gets to select length of the password, and what type of characters will be used in the password
